@@ -2,30 +2,14 @@
 namespace EA_Social_Networks_Widget\Core;
 class WP_Social_Network_Widget extends \WP_Widget {
 
-	/**
-	 * Whether or not the widget has been registered yet.
-	 *
-	 * @since 4.8.1
-	 * @var bool
-	 */
-	//protected $registered = false;
-
-/**
-    private $options;
-    private $plugin_name;
-    private $version;
-    private $plugin_text_domain;
-    
+/**    
     public static function register(Core\Options $options){
-        $page = new self($options);
-        add_action('admin_init', array($page, 'configure'));
-        add_action('admin_menu', array($page, 'addAdminPage'));
+        $new_widget = new self($options);
+        add_action('widget_init', array($new_widget, '???'));
     }
 **/
 	/**
-	 * Sets up a new Text widget instance.
-	 *
-	 * @since 2.8.0
+	 * Sets up a new  WP_Social_Network_Widget instance.
 	 */
 	public function __construct() {
 		$widget_ops  = array(
@@ -67,6 +51,14 @@ class WP_Social_Network_Widget extends \WP_Widget {
 	<!-- html and php -->
 		<ul class="soc">
 
+		<!-- 
+		we want to use:  
+		$this->options->get("facebook_url","facebook.def")
+		**NOT**
+		get_option("facebook_url") 
+
+		Below has to be fixed!!!
+		-->
 		
 		<li>	
 		<a class="icon-10 facebook" href="<?php echo $this->options->get("facebook_url","facebook.def"); ?>" title="Facebook">
