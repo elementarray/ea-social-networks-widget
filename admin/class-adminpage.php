@@ -78,38 +78,47 @@ class AdminPage {
     public function renderSizeField() {
         ?>
 	<section>
+	<input type="checkbox" name="social[github_url_check]" value="1" <?php checked($this->options->get("github_url_check")); ?> />
 	<label for="social[github_url]">Your Github URL</label>
         <input type="text" name="social[github_url]" id="social_github_url" value="<?php echo $this->options->get("github_url","github.def"); ?>" />
 	</section>
 	<section>
+	<input type="checkbox" name="social[facebook_url_check]" value="1" <?php checked($this->options->get("facebook_url_check")); ?> />
 	<label for="social[facebook_url]">Your FaceBook URL</label>
         <input type="text" name="social[facebook_url]" id="social_facebook_url" value="<?php echo $this->options->get("facebook_url","facebook.def"); ?>" />
 	</section>
 	<section>
+	<input type="checkbox" name="social[youtube_url_check]" value="1" <?php checked($this->options->get("youtube_url_check")); ?> />
 	<label for="social[youtube_url]">Your YouTube URL</label>
         <input type="text" name="social[youtube_url]" id="social_youtube_url" value="<?php echo $this->options->get("youtube_url","youtube.def"); ?>" />
 	</section>
 	<section>
+	<input type="checkbox" name="social[linkedin_url_check]" value="1" <?php checked($this->options->get("linkedin_url_check")); ?> />
 	<label for="social[linkedin_url]">Your LinkedIn URL</label>
         <input type="text" name="social[linkedin_url]" id="social_linkedin_url" value="<?php echo $this->options->get("linkedin_url","linkedin.def"); ?>" />
 	</section>
 	<section>
+	<input type="checkbox" name="social[twitter_url_check]" value="1" <?php checked($this->options->get("twitter_url_check")); ?> />
 	<label for="social[twitter_url]">Your Twitter URL</label>
         <input type="text" name="social[twitter_url]" id="social_twitter_url" value="<?php echo $this->options->get("twitter_url","twitter.def"); ?>" />
 	</section>
 	<section>
+	<input type="checkbox" name="social[instagram_url_check]" value="1" <?php checked($this->options->get("instagram_url_check")); ?> />
 	<label for="social[instagram_url]">Your Instagram URL</label>
         <input type="text" name="social[instagram_url]" id="social_instagram_url" value="<?php echo $this->options->get("instagram_url","instagram.def"); ?>" />
 	</section>
 	<section>
+	<input type="checkbox" name="social[yelp_url_check]" value="1" <?php checked($this->options->get("yelp_url_check")); ?> />
 	<label for="social[yelp_url]">Your Yelp URL</label>
         <input type="text" name="social[yelp_url]" id="social_yelp_url" value="<?php echo $this->options->get("yelp_url","yelp.def"); ?>" />
 	</section>
 	<section>
+	<input type="checkbox" name="social[deviantart_url_check]" value="1" <?php checked($this->options->get("deviantart_url_check")); ?> />
 	<label for="social[deviantart_url]">Your Deviant Art URL</label>
         <input type="text" name="social[deviantart_url]" id="social_deviantart_url" value="<?php echo $this->options->get("deviantart_url","deviantart.def"); ?>" />
 	</section>
 	<section>
+	<input type="checkbox" name="social[stackoverflow_url_check]" value="1" <?php checked($this->options->get("stackoverflow_url_check")); ?> />
 	<label for="social[stackoverflow_url]">Your StackOverflow URL</label>
         <input type="text" name="social[stackoverflow_url]" id="social_stackoverflow_url" value="<?php echo $this->options->get("stackoverflow_url","stackoverflow.def"); ?>" />
 	</section>
