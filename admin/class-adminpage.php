@@ -2,7 +2,6 @@
 namespace EA_Social_Networks_Widget\Admin;
 use EA_Social_Networks_Widget\Core as Core;
 use EA_Social_Networks_Widget as NS;
-// https://carlalexander.ca/single-responsibility-principle-wordpress/
 
 class AdminPage {
 
