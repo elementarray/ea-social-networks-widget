@@ -66,7 +66,7 @@ class WP_Social_Network_Widget extends \WP_Widget {
 	<!-- html and php -->
 		<ul class="soc">
 
-<li>	
+<li class="<? if (! $this->options->get("github_url_check") ) echo 'd-none'; ?>">	
 <a class="icon-13 github" href="<?php echo $this->options->get("github_url","github.def"); ?>" title="<?php bloginfo('name'); ?> on Github">
       <section class="ir">
         <svg viewbox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
@@ -75,7 +75,7 @@ class WP_Social_Network_Widget extends \WP_Widget {
       </section></a>
 </li>
 		
-		<li>	
+		<li class="<? if (! $this->options->get("facebook_url_check") ) echo 'd-none'; ?>">	
 		<a class="icon-10 facebook" href="<?php echo $this->options->get("facebook_url","facebook.def"); ?>" title="<?php bloginfo('name'); ?> on Facebook">
 		      <section class="ir">
 		        <svg viewbox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
@@ -84,7 +84,7 @@ class WP_Social_Network_Widget extends \WP_Widget {
 		      </section></a>
 		</li>
 		
-		<li>	
+		<li class="<? if (! $this->options->get("stackoverflow_url_check") ) echo 'd-none'; ?>">	
 		<a class="icon-23 stackoverflow" href="<?php echo $this->options->get("stackoverflow_url","stackoverflow.def"); ?>" title="<?php bloginfo('name'); ?> on Stackoverflow">
 		      <section class="ir">
 		        <svg viewbox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
@@ -93,7 +93,7 @@ class WP_Social_Network_Widget extends \WP_Widget {
 		      </section></a>
 		</li>
 		
-		<li>	
+		<li class="<? if (! $this->options->get("deviantart_url_check") ) echo 'd-none'; ?>">	
 		<a class="icon-6 deviantart" href="<?php echo $this->options->get("deviantart_url","deviantart.def"); ?>" title="<?php bloginfo('name'); ?> on Deviantart">
 		      <section class="ir">
 		        <svg viewbox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
@@ -102,7 +102,7 @@ class WP_Social_Network_Widget extends \WP_Widget {
 		      </section></a>
 		</li>
 		
-		<li>	
+		<li class="<? if (! $this->options->get("youtube_url_check") ) echo 'd-none'; ?>">	
 		<a class="icon-28 youtube" href="<?php echo $this->options->get("youtube_url","youtube.def"); ?>" title="<?php bloginfo('name'); ?> on Youtube">
 		      <section class="ir">
 		        <svg viewbox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
@@ -111,7 +111,7 @@ class WP_Social_Network_Widget extends \WP_Widget {
 		      </section></a>
 		</li>
 		
-		<li>	
+		<li class="<? if (! $this->options->get("linkedin_url_check") ) echo 'd-none'; ?>">	
 		<a class="icon-17 linkedin" href="<?php echo $this->options->get("linkedin_url","linkedin.def"); ?>" title="<?php bloginfo('name'); ?> on Linkedin">
 		      <section class="ir">
 		        <svg viewbox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
@@ -120,21 +120,21 @@ class WP_Social_Network_Widget extends \WP_Widget {
 		      </section></a>
 		</li>
 
-	<li><a class="icon-26 twitter" href="<?php echo $this->options->get("twitter_url","twitter.def"); ?>" title="<?php bloginfo('name'); ?> on Twitter">
-	<section class="ir">
+		<li class="<? if (! $this->options->get("twitter_url_check") ) echo 'd-none'; ?>"><a class="icon-26 twitter" href="<?php echo $this->options->get("twitter_url","twitter.def"); ?>" title="<?php bloginfo('name'); ?> on Twitter">
+		<section class="ir">
 		<svg viewbox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
 		          <path d="M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z"></path>
 		 </svg>
-      	</section></a></li>
+      		</section></a></li>
 
-	<li><a class="icon-29 yelp" href="<?php echo $this->options->get("yelp_url","yelp.def"); ?>" title="<?php bloginfo('name'); ?> on Yelp">
-      	<section class="ir">
+		<li class="<? if (! $this->options->get("yelp_url_check") ) echo 'd-none'; ?>"><a class="icon-29 yelp" href="<?php echo $this->options->get("yelp_url","yelp.def"); ?>" title="<?php bloginfo('name'); ?> on Yelp">
+      		<section class="ir">
         	<svg viewbox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
           		<path d="M284.1 298.4c-6.1 6.1-0.9 17.3-0.9 17.3l45.8 76.4c0 0 7.5 10.1 14 10.1 6.5 0 13-5.4 13-5.4l36.2-51.7c0 0 3.6-6.5 3.7-12.2 0.1-8.1-12.1-10.4-12.1-10.4l-85.7-27.5C298.1 294.9 289.7 292.7 284.1 298.4L284.1 298.4zM279.7 259.8c4.4 7.4 16.5 5.3 16.5 5.3l85.5-25c0 0 11.6-4.7 13.3-11.1 1.6-6.3-1.9-13.9-1.9-13.9L352.2 167c0 0-3.5-6.1-10.9-6.7 -8.1-0.7-13.1 9.1-13.1 9.1l-48.3 76C280 245.4 275.7 253 279.7 259.8L279.7 259.8zM239.4 230.2c10.1-2.5 11.7-17.1 11.7-17.1l-0.7-121.7c0 0-1.5-15-8.3-19.1 -10.6-6.4-13.7-3.1-16.7-2.6l-71 26.4c0 0-6.9 2.3-10.6 8.1 -5.2 8.2 5.3 20.2 5.3 20.2L222.8 225C222.8 225 230.1 232.5 239.4 230.2L239.4 230.2zM221.8 279.5c0.3-9.4-11.3-15-11.3-15l-76.3-38.5c0 0-11.3-4.7-16.8-1.4 -4.2 2.5-7.9 7-8.3 11l-5 61.2c0 0-0.7 10.6 2 15.4 3.9 6.8 16.7 2.1 16.7 2.1l89.1-19.7C215.4 292.1 221.5 291.9 221.8 279.5L221.8 279.5zM244 312.5c-7.6-3.9-16.8 4.2-16.8 4.2l-59.6 65.6c0 0-7.4 10-5.5 16.2 1.8 5.8 4.7 8.6 8.9 10.7l59.9 18.9c0 0 7.3 1.5 12.8-0.1 7.8-2.3 6.4-14.5 6.4-14.5l1.4-88.9C251.3 324.6 251 316.1 244 312.5L244 312.5zM244 312.5"></path>
-        </svg>
-      </section></a></li>
+        	</svg>
+      		</section></a></li>
 
-		</ul>
+	</ul>
 		<!-- end of html -->
 	<?php
 	ob_end_flush();
