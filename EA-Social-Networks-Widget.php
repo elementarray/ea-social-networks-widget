@@ -37,8 +37,8 @@ class EA_Social_Networks_Widget {
         $options = Core\Options::load();
         Admin\AdminPage::register($options);
 	Core\Shortcode::register($options);
-	////////// this is how i'd like to load the widget...///////////////////////////
 	Core\WP_Social_Network_Widget::register($options);
+	Core\CSS_Loader::init();
     }
 
 } 
