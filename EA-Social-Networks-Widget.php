@@ -39,6 +39,7 @@ class EA_Social_Networks_Widget {
 	Core\Shortcode::register($options);
 	Core\WP_Social_Network_Widget::register($options);
 	Core\CSS_Loader::init();
+	Core\JS_Loader::init();
     }
 
 } 
