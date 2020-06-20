@@ -1,0 +1,70 @@
+$background: 	hsla(180, 100%, 10%, .7)
+
+
+.intrinsic_ratio
+  display: block;
+  overflow: visible;
+  padding: 0 0 100%
+  position: relative
+  height: 0
+  width: 100%
+  > *
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+
+/** top level container (ul?) **/
+#social_networks
+  display: block
+  font-size: 0
+  list-style: none
+  margin: 0 auto
+  padding: 4px 
+  text-align: center
+  max-width: 100%
+  li
+    display: inline-block
+    margin: 4px
+  a, svg
+    display: block
+  a
+    position: relative
+    height: 48px
+    width: 48px
+
+/** ux **/
+%social_icon_hover
+  border-radius: 100%
+  color: $background
+  fill: $background
+  transform: scale(1.25)
+  transition: background-color .5s, transform .5s ease-out
+
+/** sass **/
+@for $i from 1 through 32
+  .icon_#{$i}
+    color: hsl($i * 12, 70, 50)
+    fill: hsl($i * 12, 70, 50)
+    &:hover
+      background: hsl($i * 12, 70, 50)
+      @extend %social_icon_hover
+
+.icon_10
+  color:#4267B2
+  fill:#4267B2
+  &:hover
+    background:#4267B2
+
+.icon_23
+  color:#f48024
+  fill:#f48024
+  &:hover
+    background:#f48024
+
+.icon_26
+  color:#1DA1F2
+  fill:#1DA1F2
+  &:hover
+    background:#1DA1F2
