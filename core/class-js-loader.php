@@ -15,7 +15,12 @@ class JS_Loader implements Interfaces\Interface_Assets {
  
         	add_action( 
 			'admin_enqueue_scripts',
-            		array( __CLASS__, 'enqueue' )
+            		array( __CLASS__, 'backend_enqueue' )
+        	);
+
+        	add_action( 
+			'wp_enqueue_scripts',
+            		array( __CLASS__, 'frontend_enqueue' )
         	);
  
     	}
@@ -23,20 +28,35 @@ class JS_Loader implements Interfaces\Interface_Assets {
 
     	public function __construct(  ) { }
 
+	public static function frontend_enqueue(){
+        	wp_enqueue_script(
+            		'frontend_custom_jq',
+            		plugins_url( 'assets/js/frontend_custom_jq.js', dirname( __FILE__ ) ),
+            		array('jquery'),
+            		filemtime( plugin_dir_path( dirname( __FILE__ ) ) . 'assets/js/frontend_custom_jq.js' ),
+			true
+        	);
+	}
+
     	// Defines the functionality responsible for loading the file.
-    	public static function enqueue() {
+    	public static function backend_enqueue() {
  		wp_enqueue_script('jquery-ui-sortable');
 			//'https://code.jquery.com/ui/1.12.1/jquery-ui.js',
 			//'array()',
 			//'1.12.1',
 			// false
         	wp_enqueue_script(
-            		'ea-social-networks-jq-ui',
-            		plugins_url( 'assets/js/ea-social-networks-jqui.js', dirname( __FILE__ ) ),
+            		'backend_custom_jq',
+            		plugins_url( 'assets/js/backend_custom_jq.js', dirname( __FILE__ ) ),
             		array('jquery','jquery-ui-sortable'),
-            		filemtime( plugin_dir_path( dirname( __FILE__ ) ) . 'assets/js/ea-social-networks-jqui.js' ),
+            		filemtime( plugin_dir_path( dirname( __FILE__ ) ) . 'assets/js/backend_custom_jq.js' ),
 			true
         	);
+		wp_localize_script( 
+			'ea-social-networks-jq-ui', 
+			'ajaxTest', 
+			array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) 
+		);
  
     	}
 }
