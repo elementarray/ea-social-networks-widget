@@ -9,7 +9,7 @@ class Options {
 	// unserialize(urldecode())
     public static function load() {
         $options = get_option('social',array());
-        return new self($options);
+	return new self($options? $options : (array) null);
     }
 
     public function __construct(array $options = array()){ $this->options = $options; }
